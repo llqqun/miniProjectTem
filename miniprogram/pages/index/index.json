@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "toast": "/components/toast/toast",
+    "ft-transiton": "/components/transition/transition"
+  }
+}

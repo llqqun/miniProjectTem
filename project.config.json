@@ -1,0 +1,33 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "appid": "wx27b5ed6a6ccdf4e3",
+  "compileType": "miniprogram",
+  "libVersion": "3.2.1",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "useCompilerPlugins": [
+      "less"
+    ],
+    "coverView": false,
+    "es6": true,
+    "postcss": false,
+    "minified": false,
+    "enhance": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmRelationList": [],
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "auto",
+    "tabSize": 2
+  },
+  "srcMiniprogramRoot": "miniprogram/"
+}
