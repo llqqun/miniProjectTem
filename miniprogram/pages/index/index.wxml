@@ -2,12 +2,13 @@
 <navigation-bar title="法图灵" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
-    <toast show="{{true}}" message="123"></toast>
-    <button bind:tap="onClickFade">测试按钮</button>
-    <ft-transiton
+  <text class="iconfont icon-right"></text>
+    <toast id="ft-toast"></toast>
+    <button bind:tap="onClickFade">Toast按钮</button>
+    <!-- <ft-transiton
     show="{{ show }}"
     name="{{ name }}"
     custom-class="block"
-    ></ft-transiton>
+    ></ft-transiton> -->
   </view>
 </scroll-view>

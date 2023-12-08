@@ -1,1 +1,67 @@
-/* components/toast/toast.wxss */
+@import '../../assets/var.less';
+.ft-toast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  color: var(--toast-text-color, @toast-text-color);
+  font-size: var(--toast-font-size, @toast-font-size);
+  line-height: var(--toast-line-height, @toast-line-height);
+
+  // allow newline charactor
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: var(--toast-background-color, @toast-background-color);
+  border-radius: var(--toast-border-radius, @toast-border-radius);
+
+  &__container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    // hack for avoid max-width when use left & fixed
+    width: fit-content;
+    transform: translate(-50%, -50%);
+    max-width: var(--toast-max-width, @toast-max-width);
+  }
+
+  &--text {
+    min-width: var(--toast-text-min-width, @toast-text-min-width);
+    padding: var(--toast-text-padding, @toast-text-padding);
+  }
+
+  .ft-toast__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  &--icon {
+    width: var(--toast-default-width, @toast-default-width);
+    min-height: var(--toast-default-min-height, @toast-default-min-height);
+    padding: var(--toast-default-padding, @toast-default-padding);
+
+    .van-toast__text {
+      padding-top: @padding-xs;
+    }
+  }
+
+  &--top {
+    transform: translate(0, -30vh);
+  }
+
+  &--bottom {
+    transform: translate(0, 30vh);
+  }
+  .loading {
+    animation: rotate 2s linear infinite;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

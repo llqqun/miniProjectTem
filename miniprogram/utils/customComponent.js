@@ -25,7 +25,6 @@ export default function VantComponent(vantOptions) {
     options.externalClasses.push('custom-class');
     // add default behaviors
     options.behaviors = options.behaviors || [];
-    console.log(basic);
     options.behaviors.push(basic);
     // add relations
     const { relation } = vantOptions;
@@ -42,6 +41,5 @@ export default function VantComponent(vantOptions) {
         multipleSlots: true,
         addGlobalClass: true,
     };
-    console.log(options);
     Component(options);
 }

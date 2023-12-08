@@ -1,5 +1,10 @@
-<view
-    class="van-toast van-toast--{{ (type === 'text' || type === 'html') ? 'text' : 'icon' }} van-toast--{{ position }}"
+<ft-transition
+  show="{{ show }}"
+  custom-style="z-index: {{ zIndex }}"
+  custom-class="ft-toast__container"
+>
+  <view
+    class="ft-toast ft-toast--{{ (type === 'text' || type === 'html') ? 'text' : 'icon' }} ft-toast--{{ position }}"
     catch:touchmove="noop"
   >
     <!-- text only -->
@@ -10,15 +15,11 @@
 
     <!-- with icon -->
     <block wx:else>
-      <van-loading
-        wx:if="{{ type === 'loading' }}"
-        color="white"
-        type="{{ loadingType }}"
-        custom-class="van-toast__loading"
-      />
-      <van-icon wx:else class="van-toast__icon" name="{{ type }}" />
-      <text wx:if="{{ message }}" class="van-toast__text">{{ message }}</text>
+      <image wx:if="{{ type === 'loading' }}" class="ft-toast__icon loading" src="/assets/svg/loading.svg" alt=""/>
+      <image wx:else class="ft-toast__icon" src="/assets/svg/{{ type }}.svg" />
+      <text wx:if="{{ message }}" class="ft-toast__text">{{ message }}</text>
     </block>
 
     <slot />
   </view>
+</ft-transition>
