@@ -5,6 +5,7 @@
   <text class="iconfont icon-right"></text>
     <toast id="ft-toast"></toast>
     <button bind:tap="onClickFade">Toast按钮</button>
+    <button bind:tap="onClickRouter">MY页面</button>
     <!-- <ft-transiton
     show="{{ show }}"
     name="{{ name }}"

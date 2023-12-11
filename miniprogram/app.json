@@ -1,7 +1,21 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/my/my",
+    "pages/bus/bus"
   ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的"
+    }
+  ],
+  "custom": true
+  },
   "window": {
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
@@ -20,7 +34,7 @@
   },
   "usingComponents": {
     "navigation-bar": "/components/navigation-bar/navigation-bar"
-    },
+  },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"

@@ -13,7 +13,7 @@
     ],
     "coverView": false,
     "es6": true,
-    "postcss": false,
+    "postcss": true,
     "minified": false,
     "enhance": true,
     "showShadowRootInWxmlPanel": true,

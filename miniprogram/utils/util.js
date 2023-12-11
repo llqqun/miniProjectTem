@@ -58,3 +58,22 @@ export function requestAnimationFrame(cb) {
     cb();
   }, 1000 / 30);
 }
+
+export function deepClone(source) {
+	if (!source && typeof source !== 'object') {
+		throw new Error('复制错误', 'deepClone');
+	}
+	const targetObj = source.constructor === Array ? [] : {};
+	Object.keys(source).forEach(keys => {
+		if (source[keys] && typeof source[keys] === 'object') {
+			targetObj[keys] = deepClone(source[keys]);
+		} else {
+			targetObj[keys] = source[keys];
+		}
+	});
+	return targetObj;
+}
+
+export function systemInfo () {
+  return wx.getAccountInfoSync()
+}
